@@ -1,0 +1,157 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+}
+
+a {
+    text-decoration: none;
+    list-style: none;
+    color: black;
+    cursor: pointer;
+}
+
+#bgImage_section {
+    width: 100%;
+    height: 100%;
+    background: url("forest.jpg") center/cover no-repeat;
+    overflow: hidden;
+    display: flex;
+}
+
+.left_section {
+    width: 50%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 16px;
+    border-radius: 0 5% 5% 0;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: center;
+    gap: 10%;
+}
+
+.left_section h1 {
+    font-size: 120px;
+    font-weight: bold;
+    /* color: black;
+    mix-blend-mode: multiply; */
+    background: url("forest.jpg") center/cover no-repeat;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.left_section #left_section_Btn {
+    border: solid white 1px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 50px;
+    margin: 0 10% 0 0;
+    font-size: 20px;
+    font-weight: 500;
+    width: 300px;
+    background: rgba(255, 255, 255, 0);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+#left_section_Btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    background: #444;
+}
+
+.rigth_section {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5%;
+}
+
+.rigth_section h1 {
+    color: white;
+    font-size: 100px;
+}
+
+
+
+/* 遷移用カバー */
+/* .page-transition {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: gray;
+  z-index: 9999;
+  transition: left 0.6s ease-in-out;
+}
+
+.page-transition.active {
+  left: 0;
+} */
+
+.page-transition {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: #626262; /* 最初は黒 */
+  z-index: 9999;
+  transition: left 0.6s ease-in-out, background-color 0.6s ease-in-out;
+}
+
+.page-transition.active {
+  left: 0;
+}
+
+.page-transition.fade-white {
+  background: #fff; /* 白にフェード */
+}
+
+.p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    font-weight: 900;
+    color: white;
+}
+
+.inptext {
+    display: none;
+}
+
+@media (max-width: 986px) {
+    #bgImage_section {
+        display: none;
+    }
+    .inptext {
+        display: block;
+        color: red;
+        border: #444;
+        background: rgb(220, 220, 220);
+        border-radius: 10px;
+        padding: 50px;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        box-shadow: 0 12px 12px rgb(112, 112, 112);
+    }
+}
