@@ -19,7 +19,7 @@ a {
 #bgImage_section {
     width: 100%;
     height: 100%;
-    background: url("forest.jpg") center/cover no-repeat;
+    background: url('/image/forest.jpg') center/cover no-repeat;
     overflow: hidden;
     display: flex;
 }
@@ -44,7 +44,7 @@ a {
     font-weight: bold;
     /* color: black;
     mix-blend-mode: multiply; */
-    background: url("forest.jpg") center/cover no-repeat;
+    background: url("/image/forest.jpg") center/cover no-repeat;
     -webkit-background-clip: text;
     color: transparent;
 }
