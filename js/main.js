@@ -17,7 +17,7 @@
 
 // animate();
 
-gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
 // gsap.to("#headImage", {
 //     y: 150,
@@ -46,9 +46,11 @@ let tl = gsap.timeline({
         trigger: ".head",
         start: "top top",
         end: "bottom top",
-        scrub: true
+        scrub: true,
+        markers: true,
     }
 });
 
-tl.to("#headTitle", { y: -700, ease: "power2.inOut" })
+tl.to("#headTitle", { y: -600, ease: "power2.inOut" })
     .to("#headImage", { y: 150, ease: "power2.inOut" }, "<");
+
