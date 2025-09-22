@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Alumni+Sans+Pinstripe:ital@0;1&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lexend+Giga:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 * {
     margin: 0;
@@ -31,7 +32,7 @@ a {
     position: absolute;
     top: 10%;
     height: 250px;
-    font-size: 400px;
+    font-size: clamp(5rem, 24vw, 25rem);
     font-weight: 100;
     color: white;
     line-height: 0.7;
@@ -109,6 +110,7 @@ nav li a i {
 
 .head img {
     max-width: 100%;
+    min-width: 300px;
     max-height: 90%;
     display: block;
     margin-top: 5%;
@@ -140,11 +142,146 @@ nav li a i {
     font-size: 40px;
 }
 
-main {
-    height: 100vh;
+.topicks {
+    height: calc(150vh);
     width: 100%;
-    background: pink;
+    background: rgb(177, 128, 137);
+    padding: 0 100px;
+    display: grid;
+    gap: 5%;
+    grid-template-columns: 0.35fr 1fr 1fr;
+    grid-template-rows: 40% 40%;
+    padding-top: 10%;
 }
+
+.topicks .title {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    position: absolute;
+    top: 125%;
+    left: 100px;
+    font-size: clamp(1.5rem, 5vw, 4rem);
+    font-family: "Lexend Giga", sans-serif;
+    font-weight: 100;
+    writing-mode: vertical-rl;
+    color: white;
+}
+
+.topicks .content_container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.topicks .content_container .box{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 0.25fr 1fr;
+}
+.topicks .content_container .box .textBox{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.topicks .content_container .textBox {
+    color: white;
+}
+
+.topicks .content_container .textBox .text {
+    font-family: "Alumni Sans Pinstripe", sans-serif;
+}
+
+.topicks .content_container .textBox .dayMemories {
+    font-weight: 500;
+    font-family: "Roboto", sans-serif; 
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.topicks .content_container .box .textBox .dayMemories .day{
+    font-size: 36px;
+}
+.topicks .content_container .box .textBox .dayMemories span{
+    font-size: 13px;
+}
+.topicks .content_container .box .textBox .text .newsTitle {
+    font-weight: 200;
+    font-size: 19px;
+}
+.topicks .content_container .box .imageBox{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    padding: 65px 50px;
+    overflow: hidden;
+    transition: background 0.3s ease;
+    border: none;
+}
+.topicks .content_container .box .imageBox img{
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    /* max-width: 100%;
+    height: auto; */
+    box-shadow: 50px 65px 15px rgba(70, 70, 70, 0.5);
+    transition: all 0.5s ease-in-out;
+}
+.topicks .content_container:hover .box .imageBox{
+    animation: glow-once 0.8s ease-out forwards;
+}
+.topicks .content_container:hover .box .imageBox img{
+    transform: scale(1.05);
+    transition: all 0.5s ease-in-out; 
+}
+@keyframes glow-once {
+    0%   { background: none; }
+    30%  { background: rgba(255, 255, 255, 0.2); }
+    100% { background: none; } 
+  /* 0%   { box-shadow: 0 0 0 rgba(255, 255, 255, 0); }
+  30%  { box-shadow: 0 0 30px rgba(255, 255, 255, 1); }
+  100% { box-shadow: 0 0 0 rgba(255, 255, 255, 0); } */
+}
+
+
+
+.topicks .content1 {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+
+.topicks .content2 {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+.topicks .content3 {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+.topicks .content4 {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+
+
 
 @media (max-width: 1990px) {
     .head img {

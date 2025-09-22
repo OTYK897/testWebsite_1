@@ -52,5 +52,5 @@ let tl = gsap.timeline({
 });
 
 tl.to("#headTitle", { y: -600, ease: "power2.inOut" })
-    .to("#headImage", { y: 150, ease: "power2.inOut" }, "<");
+    .to("#headImage", { y: 130, ease: "power2.inOut" }, "<");
 
