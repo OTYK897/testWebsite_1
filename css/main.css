@@ -299,7 +299,7 @@ nav li a i {
     }
 
     .topicks {
-        height: calc(330vh);
+        height: calc(400vh);
         grid-template-columns: 0.35fr 1fr;
         grid-template-rows: 1fr 1fr 1fr 1fr;
     }
