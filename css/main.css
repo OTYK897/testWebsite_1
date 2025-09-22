@@ -24,7 +24,7 @@ a {
 
 .title {
     position: relative;
-    z-index: 10000;
+    z-index: 9999;
 }
 
 .title p {
@@ -39,7 +39,6 @@ a {
     font-family: "Alumni Sans Pinstripe", sans-serif;
     font-weight: 400;
     font-style: normal;
-    z-index: 9999;
 }
 
 .title:hover p {
@@ -55,7 +54,8 @@ a {
   justify-content: space-between;
   align-items: top;
   padding: 0 100px;
-overflow: hidden;
+  overflow: hidden;
+  box-sizing: border-box;
 }
 
 
@@ -65,7 +65,7 @@ nav {
     position: fixed;
     top: 50px;
     right: 100px;
-    z-index: 9999;
+    z-index: 10000;
 }
 
 nav ul {
@@ -109,14 +109,15 @@ nav li a i {
 
 .head img {
     max-width: 100%;
-    max-height: 85%;
+    max-height: 90%;
     display: block;
     margin-top: 5%;
     right: 100px;
-    z-index: 0;
+    z-index: 1;
     transition: transform 0.3s ease-in-out; 
     height: auto;
     object-fit: contain;
+    position: absolute;
 }
 
 .memberlist {
@@ -145,6 +146,17 @@ main {
     background: pink;
 }
 
-@media (max-width: 1500px) {
-    
+@media (max-width: 1990px) {
+    .head img {
+        top: 12%;
+        height: 69%;
+    }
+} 
+
+@media (max-width: 1580px) {
+    .head img {
+        margin-top: 20%;
+        height: 50%;
+        position: static;
+    }
 }
