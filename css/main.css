@@ -282,6 +282,111 @@ nav li a i {
 }
 
 
+/*  SCHEDULE CONTENT CSS ↓*/
+.schedule_container {
+    background: #fff;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.schedule_container .schedule {
+    padding: 0 100px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: top;
+    justify-content: space-between;
+    margin-top: 7%;
+}
+
+.schedule_container .schedule .schedule_title {
+    font-size: clamp(1.5rem, 5vw, 4rem);
+    font-family: "Lexend Giga", sans-serif;
+    font-weight: 100;
+    writing-mode: vertical-rl;
+}
+
+.schedule_container .schedule .content_section {
+    display: flex;
+    flex-direction:  column;
+    width: 70%;
+    height: auto;
+}
+
+.schedule_container .schedule .content_section .content_container {
+    padding: 5rem;
+    border-top: 1px solid #bebebe;
+    cursor: pointer;
+}
+
+.schedule_container .schedule .content_section .content_container:nth-last-child(2) {
+    border-bottom: 1px solid #bebebe;
+}
+
+.schedule_container .schedule .content_section .content_container .content {
+    display: flex;
+    gap: 25px;
+    flex-direction: column;
+    font-family: "Roboto", sans-serif;
+}
+
+.schedule_container .schedule .content_section .content_container .content  .category_title {
+    color: gray;
+    font-size: 18px;
+    font-family: "Alumni Sans Pinstripe", sans-serif; 
+}
+
+.schedule_container .schedule .content_section .content_container .content .main_title {
+    font-weight: 400;
+    transition: all 1s ease-in-out;
+}
+
+.schedule_container .schedule .content_section .content_container:hover .content .main_title {
+    animation: bg 1s ease forwards;
+    width: fit-content;
+}
+
+.schedule_container .schedule .content_section .schedule_allview {
+    width: 96%;
+    height: 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;    
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: clamp(2rem, 5vw, 5rem);
+    font-weight: 200;
+    font-family: "Alumni Sans Pinstripe", sans-serif; 
+    margin-top: 5%;
+    border-bottom: 2px solid #bebebe;
+}
+
+.schedule_container .schedule .content_section .schedule_allview .ri-arrow-right-s-line {
+    font-size: clamp(2rem, 5vw, 4rem);
+    display: none;
+    transition: all 1s ease;
+    cursor: pointer;
+}
+
+.schedule_container .schedule .content_section .schedule_allview:hover .ri-arrow-right-s-line {
+    display: block;
+    animation: schedule_allview_icon 1s ease forwards;
+}
+
+@keyframes bg {
+    0%   { background: none; transform: translateX(0%); }
+    30%  { background: rgba(3, 3, 3, 0.1); transform: translateX(7%); }
+    100% { background: rgba(3, 3, 3, 0.7); transform: translateX(3.5%); color: rgb(236, 236, 236); } 
+}
+
+@keyframes schedule_allview_icon {
+    0%   { background: none; transform: translateX(0); opacity: 0;}
+    30%  { transform: translateX(30%); opacity: 0.3;}
+    100% { transform: translateX(0); opacity: 1;} 
+}
 
 
 @media (max-width: 1990px) {
@@ -328,4 +433,11 @@ nav li a i {
         grid-row-end: 5;
     }
 
+}
+
+@media (max-width: 500px) {
+    .head,
+    .topicks {
+        padding: 0;
+    }
 }
