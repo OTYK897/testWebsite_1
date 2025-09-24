@@ -140,9 +140,9 @@ a {
 
 @media (max-width: 986px) {
     #bgImage_section {
-        display: none;
+        display: block;
     }
-    .inptext {
+    /* .inptext {
         display: block;
         color: red;
         border: #444;
@@ -153,5 +153,5 @@ a {
         top: 50%;
         transform: translateY(-50%);
         box-shadow: 0 12px 12px rgb(112, 112, 112);
-    }
+    } */
 }
