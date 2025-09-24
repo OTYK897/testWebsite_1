@@ -350,7 +350,7 @@ nav li a i {
 
 .schedule_container .schedule .content_section .schedule_allview {
     width: 96%;
-    height: 5%;
+    height: 10%;
     display: flex;
     justify-content: space-between;
     align-items: end;    
@@ -362,13 +362,14 @@ nav li a i {
     font-family: "Alumni Sans Pinstripe", sans-serif; 
     margin-top: 5%;
     border-bottom: 2px solid #bebebe;
+    cursor: pointer;
+    transition: all 1s ease;
 }
 
 .schedule_container .schedule .content_section .schedule_allview .ri-arrow-right-s-line {
     font-size: clamp(2rem, 5vw, 4rem);
     display: none;
     transition: all 1s ease;
-    cursor: pointer;
 }
 
 .schedule_container .schedule .content_section .schedule_allview:hover .ri-arrow-right-s-line {
