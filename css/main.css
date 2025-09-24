@@ -316,6 +316,8 @@ nav li a i {
 }
 
 .schedule_container .schedule .content_section .content_container {
+    width: 100%;
+    height: auto;
     padding: 5rem;
     border-top: 1px solid #bebebe;
     cursor: pointer;
