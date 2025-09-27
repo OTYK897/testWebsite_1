@@ -11,7 +11,7 @@
 body {
     width: 100%;
     height: 100vh;
-    overflow: hidden; 
+    overflow: hidden;
 }
 
 body.loaded {
@@ -557,7 +557,22 @@ nav li a i {
 
 @media (max-width: 500px) {
     .head,
-    .topicks {
+    .topicks,
+    .schedule {
         padding: 0;
+    }
+
+    .head nav {
+        display: none;
+    }
+
+    .topicks {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .topicks .imageBox img {
+        max-width: 100%;
+        height: auto;
     }
 }
